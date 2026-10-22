@@ -333,3 +333,92 @@ header nav {
 .user-session-logout:hover {
     background: #d9534f;
 }
+
+/* =========================================
+   DISEÑO RESPONSIVO (CELULARES Y TABLETS)
+   ========================================= */
+
+/* Reglas generales para evitar que el contenido desborde */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ajustes para pantallas de hasta 768px (Celulares) */
+@media (max-width: 768px) {
+  
+  body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden; /* Evita el scroll horizontal molesto */
+  }
+
+  /* Apila el logo y el título o menú del header en columna */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px 10px;
+    gap: 10px;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .logo img {
+    max-width: 120px; /* Ajusta el tamaño del logo en móvil */
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  /* Si tenés barra de navegación (nav), la pone en vertical o centrada */
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    gap: 8px;
+  }
+
+  nav a, button, .btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px; /* Botones más cómodos para tocar con el dedo */
+    font-size: 1rem;
+  }
+
+  /* Contenedores principales, tarjetas de tickets y formularios al 100% */
+  main, .contenedor, .container, form, .card, .panel {
+    width: 95% !important;
+    max-width: 100% !important;
+    margin: 10px auto !important;
+    padding: 15px !important;
+  }
+
+  /* Campos de formulario (inputs, selects, textareas) ocupan todo el ancho */
+  input, select, textarea {
+    width: 100%;
+    font-size: 16px; /* 16px evita que el navegador del celu haga auto-zoom al escribir */
+    margin-bottom: 12px;
+  }
+
+  /* Si tenés tablas de tickets en el panel técnico, permite deslizarlas de costado sin romper la página */
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
