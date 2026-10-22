@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Tickets - TechSolve</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../data/datos-locales.js" defer></script>
+    <script src="../js/datos.js" defer></script>
+    <script src="../js/navegacion.js" defer></script>
+    <script src="../js/mis-tickets.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo.jpg" alt="TechSolve logo featuring company branding for technical support services">
+            <h1>TechSolve</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="login.html">Iniciar sesión</a></li>
+                <li><a href="registrar-ticket.html">Registrar Ticket</a></li>
+                <li><a href="mis-tickets.html" class="active">Mis Tickets</a></li>
+                <li data-panel-tecnico hidden><a href="panel-tecnico.html">Panel Técnico</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Mis Tickets</h2>
+
+            <table class="tabla-tickets">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Categoría</th>
+                        <th>Descripción</th>
+                        <th>Estado</th>
+                        <th>Prioridad</th>
+                    </tr>
+                </thead>
+
+                <tbody id="ticketsTableBody">
+                    <!-- JavaScript agregará aquí las filas de los tickets -->
+                </tbody>
+            </table>
+            <button type="button" class="boton" id="historialTicketsButton">Ver Historial</button>
+            <div id="historialPanel" class="content-card" hidden>
+                <h3>Editar mis tickets</h3>
+
+                <label for="selectorTicket">Elegí un ticket:</label>
+                <select id="selectorTicket"></select>
+
+                <form id="editarTicketForm">
+                    <label for="editarCategoria">Categoría:</label>
+                    <input id="editarCategoria" required>
+
+                    <label for="editarDescripcion">Descripción:</label>
+                    <textarea id="editarDescripcion" rows="3" required></textarea>
+
+                    <button type="submit" class="boton">
+                        Guardar cambios
+                    </button>
+                </form>
+
+                <p id="mensajeEdicion" role="status"></p>
+            </div>
+        </section>
+        <section class="content-card">
+            <p id="welcomeText"></p>
+            <button class="boton secondary" id="logoutButton">Cerrar sesión</button>
+        </section>
+    </main>
+
+</body>
+
+</html>

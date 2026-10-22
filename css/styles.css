@@ -1,0 +1,335 @@
+﻿/*RESETEA MARGENES, DEFINE LA TIPOGRAFIA BASE 
+Y ESTABLE EL COLOR DE FONDO DEL CUERPO Y TEXTO */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    color: #333;
+} 
+
+/* Se define el color de encabezado azul oscuro y el color de texto blanco */ 
+
+header {
+    background: #1a202c;
+    color: #fff;
+    padding: 20px;
+}
+/* Se define el estilo del logo, incluyendo la alineación y el tamaño de la imagen */
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+}
+
+/* Se define el estilo del título del logo, incluyendo el tamaño de fuente y el peso de la fuente */
+
+nav {
+    margin-top: 15px;
+}
+/* Se define el estilo de la lista de navegación, incluyendo la eliminación de los estilos de lista predeterminados y la disposición en línea de los elementos de la lista */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+/* Se define el estilo de los enlaces de navegación, incluyendo el color, la decoración del texto, el relleno, el radio del borde y el color de fondo */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background: #2d3748;
+}
+/* Se define el estilo de los enlaces de navegación cuando se pasa el cursor sobre ellos o cuando están activos, incluyendo el color de fondo */
+nav a:hover,
+nav a.active {
+    background: #4a5568;
+}
+/* Se define el estilo del contenido principal, incluyendo el relleno, el ancho máximo y la alineación centrada */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+/* Se define el estilo del encabezado de la página, incluyendo el margen inferior y el tamaño de fuente */
+
+.page-header h2 {
+    margin: 0 0 10px 0;
+    font-size: 26px;
+}
+/* Se define el estilo del párrafo dentro del encabezado de la página, incluyendo el margen inferior y el color del texto */
+
+.page-header p {
+    margin: 0 0 20px 0;
+    color: #555;
+}
+
+/* Se define el estilo de las tarjetas de formulario y contenido, incluyendo el color de fondo, el borde, el radio del borde, el relleno y el margen inferior */
+
+.form-card,
+.content-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Se define el estilo del grupo de entrada, incluyendo el margen inferior */
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+/* Se define el estilo de los campos de entrada, incluyendo el ancho, el relleno, el borde y el radio del borde */
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+.boton {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #4a90e2;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: #357abd;
+}
+
+.boton.secondary {
+    background: #e2e8f0;
+    color: #333;
+}
+
+.error-message {
+    color: #d9534f;
+    margin-top: 10px;
+}
+
+.small-text {
+    color: #555;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    header,
+    main,
+    footer {
+        padding: 15px;
+    }
+}
+/* Se define el estilo de la tabla de tickets, incluyendo el ancho, la colapsación de bordes, el color de fondo y el margen inferior */
+.tabla-tickets {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.tabla-tickets th,
+.tabla-tickets td {
+    border: 1px solid #777;
+    padding: 10px;
+    text-align: left;
+}
+
+.tabla-tickets th {
+    background-color: #1a202c;
+    color: white;
+}
+
+.tabla-tickets select {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    color: #333;
+}
+
+/* Estilos exclusivos del formulario de registro de tickets. */
+.ticket-registration {
+    margin-bottom: 20px;
+}
+
+.ticket-form {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-color: #d8e1ec;
+    box-shadow: 0 12px 28px rgba(26, 32, 44, 0.1);
+}
+
+.ticket-form-header {
+    padding: 24px 28px 20px;
+    background: linear-gradient(135deg, #edf5ff, #f9fbff);
+    border-bottom: 1px solid #d9e8f6;
+}
+
+.ticket-form-kicker {
+    margin: 0 0 8px;
+    color: #357abd;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.ticket-form-header h3 {
+    margin: 0 0 8px;
+    color: #1a202c;
+    font-size: 22px;
+}
+
+.ticket-form-header p:last-child {
+    margin: 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+.ticket-form-fields {
+    display: grid;
+    gap: 20px;
+    padding: 24px 28px 28px;
+}
+
+.ticket-form .input-group {
+    margin: 0;
+}
+
+.ticket-form label {
+    margin-bottom: 8px;
+    color: #1a202c;
+}
+
+.ticket-form select,
+.ticket-form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    background: #fff;
+    color: #333;
+    font: inherit;
+}
+
+.ticket-form select {
+    height: 44px;
+}
+
+.ticket-form textarea {
+    min-height: 130px;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+.ticket-form select:focus,
+.ticket-form textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.16);
+}
+
+.ticket-submit {
+    box-shadow: 0 6px 14px rgba(53, 122, 189, 0.24);
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.ticket-submit:hover {
+    box-shadow: 0 8px 18px rgba(53, 122, 189, 0.3);
+    transform: translateY(-1px);
+}
+
+.ticket-submit:disabled {
+    cursor: wait;
+    opacity: 0.75;
+}
+
+@media (max-width: 600px) {
+    .ticket-form-header,
+    .ticket-form-fields {
+        padding: 20px;
+    }
+}
+
+/* Estilos exclusivos del formulario de inicio de sesión. */
+#loginForm input {
+    box-sizing: border-box;
+}
+
+/* Estilos del indicador de usuario activo en el encabezado. */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.user-session {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #2d3748;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.user-session-name {
+    color: #fff;
+    font-weight: bold;
+}
+
+.user-session-logout {
+    background: #4a5568;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.user-session-logout:hover {
+    background: #d9534f;
+}

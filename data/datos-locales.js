@@ -1,0 +1,28 @@
+// Copia de datos.json para abrir el proyecto sin servidor (file://).
+window.TechSolveDatosIniciales = [
+    {
+        "id": "TS01",
+        "usuario": "john_doe",
+        "categoria": "Hardware",
+        "descripcion": "Pantalla defectuosa",
+        "estado": "Abierto",
+        "prioridad": "Alta"
+    },
+    {
+        "id": "TS02",
+        "usuario": "john_doe",
+        "categoria": "Software",
+        "descripcion": "No abre el correo",
+        "estado": "En proceso",
+        "prioridad": "Media"
+    },
+    {
+        "id": "TS03",
+        "usuario": "john_doe",
+        "categoria": "Red",
+        "descripcion": "Sin conexión a internet",
+        "estado": "Pendiente",
+        "prioridad": "Alta"
+    }
+];
+
